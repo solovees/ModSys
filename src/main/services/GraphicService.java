@@ -8,7 +8,7 @@ import static java.lang.String.format;
 /**
  * Построение графиков
  */
-public class GraphicService extends BaseService {
+public class GraphicService {
 
     private static final String formula = "%sx²%s%sx+%s";
 
@@ -22,5 +22,13 @@ public class GraphicService extends BaseService {
         series.setName(format(formula, a, getSign(b), b, c));
         series.setName(format(formula, a, getSign(b), b, c));
         graphic.getData().add(series);
+    }
+
+    protected double countStep(double xMin, double xMax) {
+        return (xMax - xMin) / 100;
+    }
+
+    protected String getSign(Integer b) {
+        return b > 0 ? "+" : "";
     }
 }

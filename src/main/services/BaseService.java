@@ -1,15 +1,11 @@
 package main.services;
 
+import javafx.scene.chart.XYChart;
+
 /**
  * Базовый сервис
  */
 public abstract class BaseService {
 
-    protected double countStep(double xMin, double xMax) {
-        return (xMax - xMin) / 100;
-    }
-
-    protected String getSign(Integer b) {
-        return b > 0 ? "+" : "";
-    }
+    public abstract void setSeriesForGraphic(XYChart graphic, Integer n, Integer minX, Integer maxX);
 }
