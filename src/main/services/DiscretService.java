@@ -35,7 +35,7 @@ public class DiscretService extends BaseService {
         for (Map.Entry entry : map.entrySet()) {
             series.getData().add(new XYChart.Data((Integer) entry.getKey(),(Double) entry.getValue()));
         }
-        series.setName("Эксперемент №" + counter.toString());
+        series.setName("Эксперимент №" + counter.toString());
         counter++;
         graphic.getData().add(series);
     }
