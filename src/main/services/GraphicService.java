@@ -1,5 +1,6 @@
 package main.services;
 
+import javafx.scene.chart.LineChart;
 import javafx.scene.chart.XYChart;
 
 import static java.lang.String.format;
@@ -7,11 +8,11 @@ import static java.lang.String.format;
 /**
  * Построение графиков
  */
-public class GraphicService {
+public class GraphicService extends BaseService {
 
     private static final String formula = "%sx²%s%sx+%s";
 
-    public XYChart.Series setSeriesForGraphic(Integer a, Integer b, Integer c, Double... xValues) {
+    public void setSeriesForGraphic(LineChart graphic, Integer a, Integer b, Integer c, Double... xValues) {
         XYChart.Series series = new XYChart.Series();
         double step = countStep(xValues[0], xValues[1]);
         for (double x = xValues[0]; x < xValues[1]; x += step) {
@@ -20,14 +21,6 @@ public class GraphicService {
         }
         series.setName(format(formula, a, getSign(b), b, c));
         series.setName(format(formula, a, getSign(b), b, c));
-        return series;
-    }
-
-    private double countStep(double xMin, double xMax) {
-        return (xMax - xMin) / 100;
-    }
-
-    private String getSign(Integer b) {
-        return b > 0 ? "+" : "";
+        graphic.getData().add(series);
     }
 }
