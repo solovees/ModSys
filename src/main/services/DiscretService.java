@@ -15,7 +15,6 @@ public class DiscretService extends BaseService {
     private Random random;
     private Integer counter = 1;
 
-    @Override
     public void setSeriesForGraphic(XYChart graphic, Integer n, Integer minX, Integer maxX) {
         Double step = 1.00 / new Double(n);
         Map<Integer, Double> map = new HashMap<>();

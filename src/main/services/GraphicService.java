@@ -1,9 +1,6 @@
 package main.services;
 
-import javafx.scene.chart.LineChart;
 import javafx.scene.chart.XYChart;
-
-import java.util.Arrays;
 
 import static java.lang.String.format;
 
@@ -32,10 +29,5 @@ public class GraphicService extends BaseService {
 
     protected String getSign(Double b) {
         return b > 0 ? "+" : "";
-    }
-
-    @Override
-    public void setSeriesForGraphic(XYChart graphic, Integer n, Integer minX, Integer maxX) {
-        setSeriesForGraphic(graphic, new Double(n), new Double(minX), new Double(maxX), -10.0, 10.0);
     }
 }

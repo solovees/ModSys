@@ -7,7 +7,6 @@ import javafx.scene.chart.XYChart;
  */
 public abstract class BaseService {
 
-    public abstract void setSeriesForGraphic(XYChart graphic, Integer n, Integer minX, Integer maxX);
 
     public void clear(XYChart graphic){
         graphic.getData().clear();
