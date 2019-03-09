@@ -31,5 +31,7 @@
         <TextField fx:id="betta" layoutX="79.0" layoutY="226.0" prefHeight="25.0"
                    prefWidth="39.0"/>
         <Label layoutX="30.0" layoutY="230.0" text="Бетта"/>
+        <Button layoutX="28.0" layoutY="312.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="91.0"
+                text="Очистить"/>
     </children>
 </Pane>

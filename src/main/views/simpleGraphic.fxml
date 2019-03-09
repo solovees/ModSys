@@ -31,5 +31,7 @@
         <TextField fx:id="minX" layoutX="80.0" layoutY="195.0" prefHeight="25.0" prefWidth="37.0"/>
         <TextField fx:id="maxX" layoutX="79.0" layoutY="226.0" prefHeight="25.0" prefWidth="39.0"/>
         <Label layoutX="30.0" layoutY="230.0" text="X max:"/>
+        <Button layoutX="28.0" layoutY="312.0" mnemonicParsing="false" onAction="#clear" prefHeight="25.0"
+                prefWidth="91.0" text="Очистить"/>
     </children>
 </Pane>

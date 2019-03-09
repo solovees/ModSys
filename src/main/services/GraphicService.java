@@ -3,16 +3,18 @@ package main.services;
 import javafx.scene.chart.LineChart;
 import javafx.scene.chart.XYChart;
 
+import java.util.Arrays;
+
 import static java.lang.String.format;
 
 /**
  * Построение графиков
  */
-public class GraphicService {
+public class GraphicService extends BaseService {
 
     private static final String formula = "%sx²%s%sx+%s";
 
-    public void setSeriesForGraphic(LineChart graphic, Double a, Double b, Double c, Double... xValues) {
+    public void setSeriesForGraphic(XYChart graphic, Double a, Double b, Double c, Double... xValues) {
         XYChart.Series series = new XYChart.Series();
         double step = countStep(xValues[0], xValues[1]);
         for (double x = xValues[0]; x < xValues[1]; x += step) {
@@ -30,5 +32,10 @@ public class GraphicService {
 
     protected String getSign(Double b) {
         return b > 0 ? "+" : "";
+    }
+
+    @Override
+    public void setSeriesForGraphic(XYChart graphic, Integer n, Integer minX, Integer maxX) {
+        setSeriesForGraphic(graphic, new Double(n), new Double(minX), new Double(maxX), -10.0, 10.0);
     }
 }

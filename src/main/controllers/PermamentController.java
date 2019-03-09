@@ -7,7 +7,7 @@ import javafx.scene.control.TextField;
 import main.services.PermanentService;
 
 /**
- *  Контроллер непрерывного распределения слуяайной величины
+ * Контроллер непрерывного распределения слуяайной величины
  */
 public class PermamentController {
 
@@ -35,5 +35,14 @@ public class PermamentController {
         Integer n = Integer.parseInt(inputExperimentPermament.getText());
         permanentService.setBaseLine(graphicPermament, minX, maxX);
         permanentService.setSeriesForGraphic(graphicPermament, n, minX, maxX);
+    }
+
+    /**
+     * Отчистить график
+     *
+     * @param event - событие нажатия кнопки
+     */
+    public void clear(ActionEvent event) {
+        permanentService.clear(graphicPermament);
     }
 }

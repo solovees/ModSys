@@ -34,4 +34,13 @@ public class DiscretController {
         discretService.setBaseLine(graphicDiscret, minX, maxX);
         discretService.setSeriesForGraphic(graphicDiscret, n, minX, maxX);
     }
+
+    /**
+     * Отчистить график
+     *
+     * @param event - событие нажатия кнопки
+     */
+    public void clear(ActionEvent event) {
+        discretService.clear(graphicDiscret);
+    }
 }

@@ -39,4 +39,13 @@ public class SimpleController {
         Double xMax = Double.parseDouble(maxX.getText());
         graphicService.setSeriesForGraphic(graphic, a, b, c, xMin, xMax);
     }
+
+    /**
+     * Отчистить график
+     *
+     * @param event - событие нажатия кнопки
+     */
+    public void clear(ActionEvent event) {
+        graphicService.clear(graphic);
+    }
 }
