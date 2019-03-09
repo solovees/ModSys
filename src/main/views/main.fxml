@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.Pane?>
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="511.0"
+      prefWidth="717.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <TabPane layoutY="1.0" prefHeight="511.0" prefWidth="717.0" tabClosingPolicy="UNAVAILABLE">
+            <tabs>
+                <Tab text="Построение графика">
+                    <content>
+                        <fx:include source="simpleGraphic.fxml"/>
+                    </content>
+                </Tab>
+                <Tab text="Генерация случайных чисел (дискретное)">
+                    <content>
+                        <fx:include source="discretGraphic.fxml"/>
+                    </content>
+                </Tab>
+                <Tab text="Генерация случайных чисел (непрерывное)">
+                    <content>
+                        <fx:include source="permamentGraphic.fxml"/>
+                    </content>
+                </Tab>
+                <Tab text="Построение графика НСВ">
+                    <content>
+                        <fx:include source="nsvGraphic.fxml"/>
+                    </content>
+                </Tab>
+            </tabs>
+        </TabPane>
+    </children>
+</Pane>

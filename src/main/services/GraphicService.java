@@ -12,7 +12,7 @@ public class GraphicService {
 
     private static final String formula = "%sx²%s%sx+%s";
 
-    public void setSeriesForGraphic(LineChart graphic, Integer a, Integer b, Integer c, Double... xValues) {
+    public void setSeriesForGraphic(LineChart graphic, Double a, Double b, Double c, Double... xValues) {
         XYChart.Series series = new XYChart.Series();
         double step = countStep(xValues[0], xValues[1]);
         for (double x = xValues[0]; x < xValues[1]; x += step) {
@@ -28,7 +28,7 @@ public class GraphicService {
         return (xMax - xMin) / 100;
     }
 
-    protected String getSign(Integer b) {
+    protected String getSign(Double b) {
         return b > 0 ? "+" : "";
     }
 }
