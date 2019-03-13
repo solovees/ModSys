@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.chart.LineChart?>
 <?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.Pane?>
 <Pane xmlns="http://javafx.com/javafx"
       xmlns:fx="http://javafx.com/fxml"
       fx:controller="main.controllers.DiscretController"
       prefHeight="419.0" prefWidth="651.0">
     <children>
         <LineChart fx:id="graphicDiscret" layoutX="175.0" layoutY="1.0" prefHeight="470.0"
-                   prefWidth="530.0">
+                   prefWidth="530.0" >
             <xAxis>
                 <NumberAxis side="BOTTOM"/>
             </xAxis>

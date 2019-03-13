@@ -2,10 +2,10 @@
 
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.Pane?>
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="511.0"
-      prefWidth="717.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600"
+      prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
     <children>
-        <TabPane layoutY="1.0" prefHeight="511.0" prefWidth="717.0" tabClosingPolicy="UNAVAILABLE">
+        <TabPane layoutY="1.0" prefHeight="600.0" prefWidth="800.0" tabClosingPolicy="UNAVAILABLE">
             <tabs>
                 <Tab text="Построение графика">
                     <content>
@@ -14,7 +14,7 @@
                 </Tab>
                 <Tab text="Генерация случайных чисел (дискретное)">
                     <content>
-                        <fx:include source="discretGraphic.fxml"/>
+                        <fx:include source="discreteGraphic.fxml"/>
                     </content>
                 </Tab>
                 <Tab text="Генерация случайных чисел (непрерывное)">
@@ -22,9 +22,14 @@
                         <fx:include source="permamentGraphic.fxml"/>
                     </content>
                 </Tab>
-                <Tab text="Построение графика НСВ">
+                <Tab text="Иммитационная модель ДСВ">
                     <content>
-                        <fx:include source="nsvGraphic.fxml"/>
+                        <fx:include source="expectedСriterion.fxml"/>
+                    </content>
+                </Tab>
+                <Tab text="Иммитационная модель НСВ">
+                    <content>
+                        <fx:include source="expectedСriterionNsv.fxml"/>
                     </content>
                 </Tab>
             </tabs>

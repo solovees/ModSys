@@ -3,12 +3,13 @@ package main.controllers;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.chart.LineChart;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
-import main.services.NsvService;
+import main.services.ExpectedCriterionService;
 
-public class NsvController {
+public class ExpectedCriterionController {
 
-    private NsvService service = new NsvService();
+    private ExpectedCriterionService service = new ExpectedCriterionService();
 
     @FXML
     private TextField inputNsvA;
@@ -20,17 +21,25 @@ public class NsvController {
     private TextField betta;
     @FXML
     private LineChart graphicNsv;
+    @FXML
+    private TextField inputN;
+    @FXML
+    private Label x;
+    @FXML
+    private Label qX;
 
 
     /**
      * @param event - событие нажатия кнопки
      */
     public void createGraphic(ActionEvent event) {
+        service.clear(graphicNsv);
         Double a = Double.parseDouble(inputNsvA.getText());
         Double b = Double.parseDouble(inputNsvB.getText());
         Double al = Double.parseDouble(alpha.getText());
         Double bet = Double.parseDouble(betta.getText());
-        service.setSeriesForGraphic(graphicNsv, a, b, al, bet);
+        Integer n = Integer.parseInt(inputN.getText());
+        service.setSeriesForGraphic(graphicNsv, a, b, al, bet, x, qX, n);
     }
 
     /**

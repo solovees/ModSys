@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.Pane?>
+<Pane prefHeight="434.0" prefWidth="773.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="main.controllers.ExpectedCriterionControllerNsv">
+    <children>
+        <LineChart fx:id="graphicNsv" createSymbols="false" layoutX="175.0" layoutY="1.0" prefHeight="470.0"
+                   prefWidth="530.0">
+            <xAxis>
+                <NumberAxis lowerBound="50.0" side="BOTTOM" upperBound="50.0" label="Товар на складе"/>
+            </xAxis>
+            <yAxis>
+                <NumberAxis side="LEFT" label="Стратегия"/>
+            </yAxis>
+        </LineChart>
+        <Button layoutX="19.0" layoutY="349.0" mnemonicParsing="false" onAction="#createGraphic" prefHeight="25.0"
+                prefWidth="91.0" text="Построить"/>
+        <TextField fx:id="inputNsvA" layoutX="55.0" layoutY="23.0" prefHeight="25.0" prefWidth="60.0"/>
+        <TextField fx:id="inputNsvB" layoutX="55.0" layoutY="63.0" prefHeight="25.0" prefWidth="60.0"/>
+        <Label layoutX="30.0" layoutY="23.0" text="A"/>
+        <Label layoutX="30.0" layoutY="63.0" text="B"/>
+        <Label layoutX="30.0" layoutY="132.0" text="Альфа"/>
+        <TextField fx:id="alpha" layoutX="80.0" layoutY="128.0" prefHeight="25.0" prefWidth="37.0"/>
+        <TextField fx:id="betta" layoutX="79.0" layoutY="159.0" prefHeight="25.0" prefWidth="39.0"/>
+        <Label layoutX="30.0" layoutY="163.0" text="Бетта"/>
+        <Button layoutX="19.0" layoutY="387.0" mnemonicParsing="false" onAction="#clear" prefHeight="25.0"
+                prefWidth="91.0" text="Очистить"/>
+        <TextField fx:id="inputN" layoutX="55.0" layoutY="96.0" prefHeight="25.0" prefWidth="60.0"/>
+        <Label layoutX="30.0" layoutY="100.0" text="n"/>
+        <Label layoutX="33.0" layoutY="218.0" prefHeight="17.0" prefWidth="155.0" text="x* =" fx:id="x"/>
+        <Label fx:id="qX" layoutX="34.0" layoutY="246.0" prefHeight="17.0" prefWidth="155.0" text="Q(x*) ="/>
+    </children>
+</Pane>
