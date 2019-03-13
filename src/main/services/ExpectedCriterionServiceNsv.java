@@ -17,7 +17,7 @@ import static java.lang.String.format;
 
 public class ExpectedCriterionServiceNsv extends BaseService {
     private static final String formula = "Теоретическое %sx²%s%sx+%s";
-    private static final DecimalFormat df = new DecimalFormat("#.####");
+    private static final DecimalFormat df = new DecimalFormat("#.###");
     private Random random = new Random();
 
     public void setSeriesForGraphic(LineChart graphic, Double A, Double B, Double alpha, Double betta, Label xLabel,
@@ -35,8 +35,7 @@ public class ExpectedCriterionServiceNsv extends BaseService {
         }
         series.setName(format(formula, a, getSign(b), abs(b), c));
         graphic.getData().add(series);
-        xLabel.setText("x* = " + df.format(xMin));
-        qLabel.setText("Q(x*) = " + df.format(function.apply(xMin)));
+        xLabel.setText("Теор.: x* = " + df.format(xMin) + " Q(x*) = " + df.format(function.apply(xMin)));
 
         BinaryOperator<Double> qXandYFunction = (x, y) -> (x < y ? alpha * (y - x) : betta * (x - y));
 
@@ -63,6 +62,8 @@ public class ExpectedCriterionServiceNsv extends BaseService {
         series2.setName("Экспериментальные значения");
         series2.getNode().setStyle("-fx-stroke: transparent;");
 
+        Double ExYMin = map.values().stream().sorted().findFirst().get();
+        qLabel.setText("Экс-нт: x* = " + df.format(xMin) + "Q(x*) = " + df.format(ExYMin));
 
         LineChart.Series series3 = new LineChart.Series();
         for (Map.Entry entry : dispersia.entrySet()) {

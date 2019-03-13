@@ -4,16 +4,16 @@
 <?import javafx.scene.chart.NumberAxis?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.Pane?>
-<Pane prefHeight="434.0" prefWidth="773.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1"
+<Pane prefHeight="490.0" prefWidth="765.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
       fx:controller="main.controllers.ExpectedCriterionControllerNsv">
     <children>
-        <LineChart fx:id="graphicNsv" createSymbols="false" layoutX="175.0" layoutY="1.0" prefHeight="470.0"
-                   prefWidth="530.0">
+        <LineChart fx:id="graphicNsv" createSymbols="false" layoutX="282.0" layoutY="25.0" prefHeight="421.0"
+                   prefWidth="458.0">
             <xAxis>
-                <NumberAxis lowerBound="50.0" side="BOTTOM" upperBound="50.0" label="Товар на складе"/>
+                <NumberAxis label="Товар на складе" lowerBound="50.0" side="BOTTOM" upperBound="50.0"/>
             </xAxis>
             <yAxis>
-                <NumberAxis side="LEFT" label="Стратегия"/>
+                <NumberAxis label="Стратегия" side="LEFT"/>
             </yAxis>
         </LineChart>
         <Button layoutX="19.0" layoutY="349.0" mnemonicParsing="false" onAction="#createGraphic" prefHeight="25.0"
@@ -30,7 +30,7 @@
                 prefWidth="91.0" text="Очистить"/>
         <TextField fx:id="inputN" layoutX="55.0" layoutY="96.0" prefHeight="25.0" prefWidth="60.0"/>
         <Label layoutX="30.0" layoutY="100.0" text="n"/>
-        <Label layoutX="33.0" layoutY="218.0" prefHeight="17.0" prefWidth="155.0" text="x* =" fx:id="x"/>
-        <Label fx:id="qX" layoutX="34.0" layoutY="246.0" prefHeight="17.0" prefWidth="155.0" text="Q(x*) ="/>
+        <Label layoutX="33.0" layoutY="218.0" prefHeight="17.0" prefWidth="229.0" fx:id="x"/>
+        <Label fx:id="qX" layoutX="38.0" layoutY="267.0" prefHeight="17.0" prefWidth="229.0"/>
     </children>
 </Pane>

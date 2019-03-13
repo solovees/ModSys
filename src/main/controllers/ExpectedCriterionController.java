@@ -5,6 +5,7 @@ import javafx.fxml.FXML;
 import javafx.scene.chart.LineChart;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import main.Main;
 import main.services.ExpectedCriterionService;
 
 public class ExpectedCriterionController {
@@ -33,6 +34,7 @@ public class ExpectedCriterionController {
      * @param event - событие нажатия кнопки
      */
     public void createGraphic(ActionEvent event) {
+        graphicNsv.getStylesheets().add(Main.class.getResource("views/root.css").toExternalForm());
         service.clear(graphicNsv);
         Double a = Double.parseDouble(inputNsvA.getText());
         Double b = Double.parseDouble(inputNsvB.getText());
